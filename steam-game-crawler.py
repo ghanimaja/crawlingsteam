@@ -96,7 +96,7 @@ def main():
         type=int, default=-1)
     parser.add_argument(
         '-o', '--out', help='Output base path', required=False, default='data')
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
 
     if not os.path.exists(args.out):
         os.makedirs(args.out)
