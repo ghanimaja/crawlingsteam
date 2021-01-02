@@ -66,7 +66,7 @@ def main():
         required=False)
     parser.add_argument(
         '-o', '--output', help='Output file', default='./data/games.csv', required=False)
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
 
     extract_games(args.input, args.output)
 
